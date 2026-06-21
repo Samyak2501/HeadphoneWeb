@@ -157,7 +157,7 @@ export const TechSection: React.FC = () => {
             A perfect fusion of acoustic science and street couture. Engineered to look, feel, and sound like nothing else on the planet.
           </motion.p>
           <motion.img 
-            src="/ManWithHeadphone.png" 
+            src={`${import.meta.env.BASE_URL}ManWithHeadphone.png`} 
             alt="Aero Lifestyle" 
             className="tech-lifestyle-img"
             variants={fadeInUp}

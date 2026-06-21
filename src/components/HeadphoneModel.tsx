@@ -46,7 +46,7 @@ const colorPalettes = {
 };
 
 export const HeadphoneModel: React.FC<HeadphoneModelProps> = ({ color, scrollGroupRef }) => {
-  const { scene } = useGLTF('/headphone.glb');
+  const { scene } = useGLTF(`${import.meta.env.BASE_URL}headphone.glb`);
   const mouseYawGroupRef = useRef<THREE.Group>(null);
   const mousePitchGroupRef = useRef<THREE.Group>(null);
   const floatGroupRef = useRef<THREE.Group>(null);
@@ -184,4 +184,4 @@ export const HeadphoneModel: React.FC<HeadphoneModelProps> = ({ color, scrollGro
 };
 
 // Pre-load the GLTF asset so it starts downloading immediately
-useGLTF.preload('/headphone.glb');
+useGLTF.preload(`${import.meta.env.BASE_URL}headphone.glb`);
